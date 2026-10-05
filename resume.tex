@@ -3,26 +3,45 @@
 % Compile with: pdflatex -output-directory=build resume.tex
 % Or run: .\build.ps1   (Windows)    ./build.sh   (macOS/Linux)
 %
-% Keep this to one page: 3--4 recent roles, condensed skills,
-% and only the certifications that match the job.
+% Keep this to one page: top 4 roles, condensed skills and
+% certifications, plus a one-line leadership highlight.
+% Everything below is sample data. Replace it with your own.
 % =============================================================
 \documentclass[10pt,a4paper]{article}
 
 \input{style.tex}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.55in]{geometry}
 
-\setlength{\parskip}{2pt}
+\setlength{\parskip}{1pt}
+\linespread{0.96}
 \titleformat{\section}{\bfseries}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{3pt}
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
 \input{contact.tex}
+
+\renewcommand{\contactheader}{%
+  \begin{center}
+    {\LARGE \textbf{\name}}\\[3pt]
+    \iconlink{Email.png}{mailto:\email}{\email}
+    \, | \,
+    \iconlink{Phone.png}{tel:\phone}{\phone}
+    \, | \,
+    \iconlink{Website.png}{\websiteurl}{\websitetext}\\[1pt]
+    \iconlink{LinkedIn.png}{\linkedinurl}{\linkedintext}
+    \, | \,
+    \iconlink{Github.png}{\githuburl}{\githubtext}
+    \, | \,
+    \location
+  \end{center}
+  \vspace{8pt}%
+}
 
 \begin{document}
 
 \contactheader
 
 % ---------------- SUMMARY ----------------
-Computer science graduate with hands-on experience in data pipelines, full-stack web features, and IT support. Built ETL workflows, shipped REST-backed pages, and wrote the documentation teammates use to run the work. Sample summary --- rewrite this for each application.
+Computer Science graduate (Sample State University) with hands-on experience in data engineering, cloud platforms, full-stack web development, and enterprise IT support. Built production data pipelines (web scraping, ETL, RAG ingestion, and dbt modeling on Databricks, Snowflake, and AWS S3) and delivered web features with RESTful API integration.
 
 % ---------------- EDUCATION ----------------
 \section*{Education}
@@ -32,50 +51,53 @@ Computer science graduate with hands-on experience in data pipelines, full-stack
 % ---------------- EXPERIENCE ----------------
 \section*{Experience}
 
-\entry{Northwind Analytics}{January 2024 -- Present}
-\role{Data Analyst}
+\entry{Northwind Analytics}{January 2023 -- July 2023}
+\role{Data Analytics and Artificial Intelligence Intern}
 \begin{itemize}
-    \item Built and maintained \textbf{ETL} workflows that cleaned operational data and loaded it into a cloud warehouse for weekly reporting.
-    \item Wrote \textbf{SQL} and \textbf{Python} checks that caught quality issues before stakeholder reviews.
-    \item Documented architecture, schedules, and troubleshooting so new teammates could run jobs independently.
+    \item Designed and developed an end-to-end automated web scraping system in \textbf{Python}, serving as the primary data ingestion pipeline for a \textbf{Retrieval-Augmented Generation (RAG)} application.
+    \item Built and maintained \textbf{ETL} workflows: extracting raw documents, transforming and cleaning structured datasets, and loading processed data into cloud storage and analytics platforms.
+    \item Refactored data engineering workflows in \textbf{Databricks}, developed \textbf{dbt} data models in \textbf{Snowflake}, and configured \textbf{AWS S3} for scalable cloud storage and downstream processing.
+    \item Authored technical documentation (architecture, deployment, and troubleshooting guides) to facilitate onboarding and knowledge transfer across the team.
 \end{itemize}
 
-\entry{Contoso Labs}{June 2022 -- December 2023}
-\role{Junior Software Developer}
+\entry{Contoso Labs}{September 2022 -- December 2022}
+\role{Junior Web Developer}
 \begin{itemize}
-    \item Developed frontend and backend features for an internal web app, including publishing and user settings.
-    \item Integrated \textbf{RESTful APIs} and improved page performance and layout consistency with the design team.
-    \item Contributed through code reviews, tests, and Git-based releases in two-week sprints.
+    \item Developed and maintained frontend and backend features for the company website, including the \textbf{blog} and \textbf{announcement} management systems.
+    \item Integrated \textbf{RESTful APIs} and optimized page loading efficiency and asset delivery, improving overall application responsiveness and user experience.
+    \item Collaborated with senior developers and UI/UX designers in an agile environment, using version control and code reviews to deliver production-ready features.
 \end{itemize}
 
-\entry{Sample State University IT Help Desk}{September 2020 -- May 2022}
-\role{Student Technician}
+\entry{Harbor Learning Co.}{March 2022 -- July 2022}
+\role{Assistant Lecturer}
 \begin{itemize}
-    \item Resolved account, network, and software issues for students and staff by phone, email, and walk-up support.
-    \item Assisted with imaging, Wi-Fi troubleshooting, and access requests under campus IT policy.
+    \item Delivered mathematics lessons and review sessions for senior high school students preparing for university entrance examinations.
+    \item Developed and reviewed instructional materials and assessments, and provided individualized guidance to improve comprehension and problem-solving skills.
 \end{itemize}
 
-% ---------------- PROJECTS ----------------
-\section*{Projects}
-\entry{Campus Events Board}{github.com/alexrivera-sample/events-board}
+\entry{Sample State University}{September 2020 -- December 2022}
+\role{Student Assistant -- Campus Network Helpdesk, University Computer Center}
 \begin{itemize}
-    \item Full-stack board for student groups to post events, with approvals and hosted file storage.
+    \item Provided technical support to students, faculty, and personnel by diagnosing and resolving network, connectivity, software, and account-related issues via in-person, phone, and email support.
+    \item Assisted in deploying, configuring, and maintaining campus network infrastructure, including Wi-Fi access points, and managed campus account administration under university IT and security policies.
+    \item Supported IT operations during a large professional licensure examination on campus: software configuration, troubleshooting, and device compliance inspection.
 \end{itemize}
 
 % ---------------- SKILLS ----------------
 \section*{Skills}
-\textbf{Programming:} Python, SQL, JavaScript, HTML, CSS, Git\par
-\textbf{Data \& Cloud:} ETL pipelines, SQL warehouses, data quality checks, spreadsheets\par
-\textbf{Web:} REST APIs, responsive layout, documentation, code review\par
-\textbf{Tools:} Microsoft Office, Google Workspace
+\textbf{Programming:} Python, SQL, JavaScript, C, C++, R, MATLAB\par
+\textbf{Data \& Cloud:} Databricks, Snowflake, dbt, AWS S3, ETL pipelines, web scraping, RAG, OpenAI API\par
+\textbf{Web:} RESTful APIs, full-stack development, responsive design, performance optimization, Git\par
+\textbf{IT Support:} Network configuration, Wi-Fi/VPN setup, troubleshooting, hardware and software maintenance\par
+\textbf{Tools:} Microsoft Office, Google Suite, Adobe Creative Suite
 
 % ---------------- CERTIFICATIONS ----------------
 \section*{Certifications}
-\textbf{Sample Learning Platform:} Intermediate Python, Introduction to SQL, Version Control with Git\par
-\textbf{Sample Institute:} Lean Process Fundamentals
+\textbf{DataCamp:} Working with the OpenAI API, Prompt Engineering, RAG with LangChain, Supervised Learning with scikit-learn, Intermediate Python, Intermediate SQL, Intermediate Git\par
+\textbf{Six Sigma Sample:} Lean Six Sigma White Belt \, | \, \textbf{Sample Energy Institute:} Renewable Energy and Sustainable Development
 
 % ---------------- LEADERSHIP ----------------
-\section*{Leadership}
-Events Coordinator, Sample Computing Society (2022--2023) \, | \, Workshop Volunteer (2021--2022)
+\section*{Leadership Highlights}
+Head, Engineering and Technology Division -- STEM Catalyst (2023) \, | \, Overall Head, The Campus Reuse Project Year 12 -- Sample State Circuit (2022--2023) \, | \, Marketing and Partnerships Head -- IEEE Student Branch (2022)
 
 \end{document}

@@ -12,7 +12,7 @@
 \usepackage{graphicx}
 
 \pagestyle{empty}
-\graphicspath{{pictures/}}
+\graphicspath{{images/}}
 
 % Section heading: bold title with a thin rule (still real text for ATS)
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
@@ -26,12 +26,13 @@
 \setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=1pt, parsep=0pt}
 
 % Icon next to visible, parseable contact text.
-% Replace the PNG files in pictures/ with your own artwork.
+% Files live in images/: Email.png, Phone.png, Website.png,
+% LinkedIn.png, Github.png
 \newcommand{\contacticon}[1]{%
-  \raisebox{-0.18em}{\includegraphics[height=0.95em]{#1}}%
+  \raisebox{-0.22em}{\includegraphics[height=1.05em]{#1}}%
 }
 
-% #1 = icon filename in pictures/  #2 = URL  #3 = visible text
+% #1 = icon filename in images/  #2 = URL  #3 = visible text
 \newcommand{\iconlink}[3]{%
   \href{#2}{\contacticon{#1}\hspace{0.22em}#3}%
 }
@@ -39,14 +40,16 @@
 \newcommand{\contactheader}{%
   \begin{center}
     {\LARGE \textbf{\name}}\\[4pt]
-    \iconlink{website.png}{\websiteurl}{\websitetext}
+    \iconlink{Email.png}{mailto:\email}{\email}
     \, | \,
-    \iconlink{call.png}{tel:\phone}{\phone}
+    \iconlink{Phone.png}{tel:\phone}{\phone}
     \, | \,
-    \iconlink{linkedin.png}{\linkedinurl}{\linkedintext}
+    \iconlink{Website.png}{\websiteurl}{\websitetext}\\[2pt]
+    \iconlink{LinkedIn.png}{\linkedinurl}{\linkedintext}
     \, | \,
-    \href{mailto:\email}{\email}
+    \iconlink{Github.png}{\githuburl}{\githubtext}
     \, | \,
     \location
   \end{center}
+  \vspace{8pt}%
 }

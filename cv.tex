@@ -1,21 +1,24 @@
 % =============================================================
-% Curriculum Vitae template (multi-page, ATS-friendly)
+% Curriculum Vitae template (up to 3 pages, ATS-friendly)
 % Compile with: pdflatex -output-directory=build cv.tex
 % Or run: .\build.ps1   (Windows)    ./build.sh   (macOS/Linux)
 %
-% A CV lists a fuller history: more roles, affiliations, research,
-% certifications, and references. Use resume.tex when you need one page.
+% Sections and density follow a full student/early-career CV:
+% summary, education, a long experience history, professional
+% affiliations, certifications, skills, undergraduate research,
+% and references. Use resume.tex when you need one page.
 %
-% ATS notes: single column, standard fonts, real text next to icons,
-% no tables in the main content, dates on the same line as the role.
+% Everything below is sample data. Replace it with your own.
 % =============================================================
 \documentclass[10pt,a4paper]{article}
 
 \input{style.tex}
-\usepackage[margin=0.55in,bottom=0.45in]{geometry}
+\usepackage[margin=0.5in,bottom=0.4in]{geometry}
 
-\setlength{\parskip}{2pt}
-\linespread{0.95}
+\setlength{\parskip}{1pt}
+\linespread{0.92}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
 \input{contact.tex}
 
@@ -24,109 +27,240 @@
 \contactheader
 
 % ---------------- SUMMARY ----------------
-Results-oriented professional with experience in data platforms, software delivery, and technical support. Built automated data pipelines, contributed full-stack web features, and documented systems so teams can operate and extend them. Sample summary --- replace this paragraph with 3--5 sentences tailored to the role you want.
+Computer Science graduate (Sample State University) with hands-on experience in data engineering, cloud platforms, and IT support. Built production data pipelines (web scraping, ETL, RAG ingestion, and dbt modeling on Databricks, Snowflake, and AWS S3) and full-stack web features with RESTful API integration. Three years of campus IT support experience in network administration, troubleshooting, and account management at the university computer center. Programming knowledge includes Python, SQL, C, C++, JavaScript, MATLAB, and VHDL/Verilog. Combines technical coursework with internships and student-org leadership to contribute to IT, data, and software-driven projects.
 
 % ---------------- EDUCATION ----------------
 \section*{Education}
-\entry{Sample State University}{2019 -- 2023}
+\entry{Sample State University}{2019--2023}
 \role{Bachelor of Science in Computer Science}
-Relevant coursework: Data Structures, Databases, Computer Networks, Software Engineering.
 
 % ---------------- EXPERIENCE ----------------
 \section*{Experience}
 
-\entry{Northwind Analytics}{January 2024 -- Present}
-\role{Data Analyst}
+\entry{Northwind Analytics}{January 2023 -- July 2023}
+\role{Data Analytics and Artificial Intelligence Intern}
 \begin{itemize}
-    \item Designed and maintained \textbf{ETL} workflows that extracted, cleaned, and loaded operational data into a cloud warehouse for weekly reporting.
-    \item Wrote \textbf{SQL} and \textbf{Python} scripts to validate data quality, reducing recurring spreadsheet fixes before stakeholder reviews.
-    \item Documented pipeline architecture, refresh schedules, and troubleshooting steps so new teammates could run jobs independently.
-    \item Partnered with product and operations teams to turn business questions into dashboards and repeatable analyses.
+    \item Designed and developed an end-to-end automated web scraping system in \textbf{Python} to extract public records from multiple government websites, serving as the primary data ingestion pipeline for a \textbf{Retrieval-Augmented Generation (RAG)} application.
+    \item Built and maintained \textbf{ETL (Extract, Transform, Load)} workflows by extracting raw documents, transforming and cleaning structured datasets, and loading processed data into cloud-based storage and analytics platforms.
+    \item Refactored and optimized existing data engineering workflows in \textbf{Databricks}, improving code maintainability and supporting data processing operations.
+    \item Assisted in developing and maintaining \textbf{dbt} data models within \textbf{Snowflake}, enabling reliable data transformation and analytics-ready datasets.
+    \item Configured and integrated \textbf{AWS S3} as part of the cloud data storage architecture, supporting scalable storage and downstream data processing.
+    \item Authored comprehensive technical documentation (AWS S3 setup guides, deployment instructions, system architecture, scraper execution flow, scheduling, and troubleshooting procedures) to facilitate onboarding, knowledge transfer, and long-term maintainability of the platform.
+    \item Collaborated with data engineers and AI developers to support cloud-based data pipelines, data integration, and analytics workflows for AI-driven applications; created technical and promotional materials highlighting AI trends and data-driven solutions.
 \end{itemize}
 
-\entry{Contoso Labs}{June 2022 -- December 2023}
-\role{Junior Software Developer}
+\entry{Contoso Labs}{September 2022 -- December 2022}
+\role{Junior Web Developer}
 \begin{itemize}
-    \item Developed and maintained frontend and backend features for an internal web app, including content publishing and user settings.
-    \item Integrated \textbf{RESTful APIs} so the interface could create, update, and display records without manual page edits.
-    \item Collaborated with designers to improve layout consistency, responsiveness, and accessibility across key pages.
-    \item Participated in code reviews, testing, and Git-based releases in a two-week sprint cycle.
+    \item Developed and maintained both frontend and backend features for the company website, contributing to the implementation and enhancement of the \textbf{blog} and \textbf{announcement} management systems.
+    \item Collaborated with senior developers and UI/UX designers to improve website layouts, responsiveness, accessibility, and interface consistency across multiple pages.
+    \item Integrated and consumed \textbf{RESTful APIs} to enable seamless communication between frontend applications and backend services.
+    \item Optimized website performance by improving page loading efficiency, asset delivery, and overall application responsiveness, resulting in a smoother user experience.
+    \item Participated in debugging, testing, and code reviews within an agile development environment, using version control to deliver production-ready web features.
 \end{itemize}
 
-\entry{Sample State University IT Help Desk}{September 2020 -- May 2022}
-\role{Student Technician}
+\entry{Harbor Learning Co.}{March 2022 -- July 2022}
+\role{Assistant Lecturer}
 \begin{itemize}
-    \item Provided in-person, phone, and email support for account, network, and software issues for students and staff.
-    \item Assisted with workstation imaging, Wi-Fi troubleshooting, and access requests under campus IT policy.
-    \item Logged tickets and resolutions so common problems had a reusable knowledge-base article.
+    \item Collaborated with academic instructors to deliver mathematics lessons and facilitate review sessions for senior high school students preparing for university entrance examinations.
+    \item Developed and reviewed instructional materials, practice exercises, and assessment content to ensure accuracy, quality, and alignment with learning objectives.
+    \item Simplified complex mathematical concepts into structured, easy-to-understand lessons, and provided individualized guidance and feedback to improve comprehension and problem-solving skills.
+    \item Utilized digital learning platforms and educational technologies to support both online and in-person instruction.
 \end{itemize}
 
-\entry{Freelance}{2021 -- 2022}
-\role{Web and Design Contractor}
+\entry{Sample State University}{September 2020 -- December 2022}
+\role{Student Assistant -- Campus Network Helpdesk, University Computer Center}
 \begin{itemize}
-    \item Delivered small-business landing pages and print-ready graphics from brief through revision and handoff.
-    \item Managed timelines, file versions, and client communication for concurrent short projects.
+    \item Provided technical support to students, faculty, university personnel, and event stakeholders by diagnosing and resolving network, connectivity, software, and account-related issues through in-person, phone, and email support.
+    \item Assisted in the deployment, configuration, and maintenance of campus network infrastructure, including Wi-Fi access points, to improve connectivity across university buildings.
+    \item Managed campus account administration (authentication issues, password resets, account provisioning, and access requests) while adhering to university IT policies and security standards.
+    \item Contributed to IT support operations during a large professional licensure examination on campus by configuring software, troubleshooting technical issues, and inspecting electronic devices for compliance.
+    \item Documented technical issues, support procedures, and resolutions to support knowledge sharing, service continuity, and operational efficiency.
 \end{itemize}
 
-% ---------------- PROJECTS ----------------
-\section*{Projects}
-\entry{Campus Events Board}{github.com/alexrivera-sample/events-board}
+\entry{Freelance Graphic Designer}{2021 -- 2022}
 \begin{itemize}
-    \item Built a full-stack board where student groups can post events, with a simple admin view for approvals.
-    \item Used a hosted database and file storage so announcements and images persist across sessions.
+    \item Created custom digital illustrations for local and international clients, translating briefs into original artwork that met specific aesthetic and thematic requirements.
+    \item Managed end-to-end project workflows, from initial concept sketches to final deliverables, while adhering to agreed timelines and revision cycles.
+    \item Cultivated client relationship skills through active listening and clear communication, ensuring satisfaction and securing repeat commissions.
 \end{itemize}
 
-\entry{Personal Finance Tracker}{github.com/alexrivera-sample/finance-tracker}
+\entry{Sample City Procurement Office}{2021}
+\role{Intern}
 \begin{itemize}
-    \item Created a client-side tracker for monthly categories, with local storage and CSV export.
-    \item Focused on a clear layout so a first-time user can log expenses without an account.
+    \item Processed purchase requests and delivery receipts, ensuring alignment with budgetary allocations and procurement guidelines.
+    \item Assisted in inventory verification by cross-checking delivered supplies against order specifications and flagging discrepancies; encoded supplier information and transaction histories to support transparent, audit-ready record-keeping.
+    \item Served as internal courier, coordinating with various city departments to deliver and receive official documents, and gained foundational knowledge of government procurement processes, including bidding procedures and contract management.
 \end{itemize}
 
-% ---------------- AFFILIATIONS ----------------
+\entry{Private Tutor}{2019 -- 2020}
+\begin{itemize}
+    \item Delivered personalized instruction in mathematics and science to elementary and high school students, adapting teaching methods to individual learning styles.
+    \item Developed customized learning materials and practice exercises, tracking student progress and adjusting lesson plans to address specific knowledge gaps.
+    \item Facilitated both online and face-to-face sessions, demonstrating flexibility and effective communication in diverse learning environments.
+\end{itemize}
+
+\entry{Linden Woodworks}{2018}
+\role{Assistant Courier and Furniture Quality Finisher}
+\begin{itemize}
+    \item Conducted quality inspections on completed furniture units, identifying and flagging cosmetic imperfections to maintain product standards before client delivery.
+    \item Coordinated logistics for outgoing orders, including packaging, loading, and serving as relief courier to ensure timely and safe transport to customer locations.
+    \item Maintained workspace organization and adhered to safety protocols, supporting the production team in meeting daily operational targets efficiently.
+\end{itemize}
+
+\entry{Sample City Tourism, Culture, and Arts Office}{2017}
+\role{Intern}
+\begin{itemize}
+    \item Digitized archival documents by encoding and categorizing cultural event records, improving retrieval efficiency for future reference.
+    \item Drafted official memoranda and assisted in preparing presentation materials for tourism promotion campaigns using MS Office; maintained a centralized filing system for artist rosters and event permits.
+    \item Coordinated logistics for city-sponsored cultural activities, including venue bookings, permit processing, and participant communications, gaining practical knowledge of local government unit operations.
+\end{itemize}
+
+% ---------------- PROFESSIONAL AFFILIATIONS ----------------
 \section*{Professional Affiliations}
-\entry{Sample Computing Society}{}
+
+\entry{STEM Catalyst}{}
 \begin{itemize}
-    \item Events Coordinator \hfill 2022 -- 2023
-    \item Workshop Volunteer \hfill 2021 -- 2022
+    \item Head of Engineering and Technology Division \hfill 2023
 \end{itemize}
 
-\entry{University Open Source Club}{}
+\entry{Sample State Circle of Computing Students}{}
 \begin{itemize}
-    \item Maintainer, beginner project night \hfill 2022
+    \item Academics Division \hfill 2023
 \end{itemize}
+
+\entry{Sample State Circuit (Campus Engineering Society)}{}
+External Affairs Committee \hfill 2019--2023
+\begin{itemize}
+    \item Public Relations and Social Media Core Team Member \hfill 2020--2021
+    \item Alumni Relations Core Team Member \hfill 2019--2021
+    \item Alumni Relations Director \hfill 2022
+    \item External Affairs Engineering Week 2021 Head \hfill 2021
+    \item External Affairs Engineering Week 2022 Head \hfill 2022
+\end{itemize}
+Publicity Committee \hfill 2022
+\begin{itemize}
+    \item Technical Director \hfill 2022
+\end{itemize}
+The Campus Reuse Project \hfill 2021--2023
+\begin{itemize}
+    \item Year 12 Overall Head \hfill 2022--2023
+    \item Year 11 Special Projects Head \hfill 2021--2022
+\end{itemize}
+
+\entry{Sample State Mathematics Club}{}
+Media and Creatives Committee \hfill 2021\par
+Finance Committee \hfill 2022
+
+\entry{Sample State Scholar Association}{}
+Marketing and Partnerships Committee \hfill 2021
+\begin{itemize}
+    \item Official Publication Core Team \hfill 2022
+    \item Partnership Responsibilities Coordinator \hfill 2021
+\end{itemize}
+
+\entry{Campus Career Assistance Program}{}
+Communications Committee \hfill 2021--2022
+\begin{itemize}
+    \item Senior Associate for Publicity \hfill 2022
+    \item Job Fair Publicity Core Team Member \hfill 2022
+    \item Career Week Publicity Core Team Member \hfill 2021
+\end{itemize}
+
+\entry{Institute of Electrical and Electronics Engineers Student Branch}{}
+External Affairs Committee \hfill 2020\par
+Finance Committee \hfill 2022
+\begin{itemize}
+    \item Marketing and Partnerships Head \hfill 2022
+\end{itemize}
+Human Resources Committee \hfill 2022
+\begin{itemize}
+    \item Internal Affairs Associate \hfill 2022
+    \item Internal Affairs Discord Moderator \hfill 2022
+\end{itemize}
+
+\entry{Institute of Integrated Electrical Engineers -- Student Chapter}{}
+External Affairs Committee \hfill 2022\par
+Publicity Committee \hfill 2022
+\begin{itemize}
+    \item Organization Week Publicity Committee Core Team \hfill 2022
+\end{itemize}
+
+\entry{Sample State Herald}{}
+Campus Herald Staff \hfill 2019--2022
+\begin{itemize}
+    \item Publication Committee \hfill 2019--2022
+\end{itemize}
+
+\entry{Sample State Run Club}{}
+Founding Member \hfill 2022
+\begin{itemize}
+    \item Media and Creatives \hfill 2022
+\end{itemize}
+
+\entry{Student Technologists and Entrepreneurs Society}{}
+President \hfill 2017
+
+\entry{THE LANTERN -- Official Student Publication of Harbor Senior High School}{}
+Collaborative Desktop Publishing
+\begin{itemize}
+    \item Layout Artist \hfill 2018
+\end{itemize}
+
+\entry{THE QUILL -- Official Student Publication of Riverside National High School}{}
+Collaborative Desktop Publishing
+\begin{itemize}
+    \item Sports Writer \hfill 2017
+\end{itemize}
+
+\entry{GEAR NEWS -- Official Student Publication of the Campus Engineering Fraternity}{}
+Layout Artist and Writer \hfill 2019--2022
 
 % ---------------- CERTIFICATIONS ----------------
 \section*{Certifications}
-\textbf{Sample Learning Platform:} Introduction to SQL, Intermediate Python, Data Literacy, Version Control with Git.
 
-\textbf{Sample Institute:} Lean Process Fundamentals \, | \, \textbf{Sample Cloud Academy:} Cloud Storage Basics
+\textbf{From DataCamp:} Working with the OpenAI API, Understanding Artificial Intelligence, Prompt Engineering with the OpenAI API, Introduction to Programming Using Python, Intermediate Python, AI Fundamentals, Understanding Data Science, Supervised Learning with scikit-learn, Introduction to SQL, Introduction to Git, Intermediate SQL, Intermediate Git, Data Literacy, Retrieval Augmented Generation (RAG) with LangChain.
+
+\textbf{From Sample Energy Institute:} Renewable Energy and Sustainable Development
+
+\textbf{From Six Sigma Sample:} Lean Six Sigma White Belt Certification
+
+\textbf{From Sample Technical Academy:} Sustainability Engineering, Statistics with Excel Data Analysis Toolpak, Mastering E-Learning Dynamics with AI-Driven LMS Integration, MEPF Engineering 101: Exploring the Basics of Mechanical, Electrical, Plumbing, and Fire Protection Systems, Graphical Analysis Using Minitab, Automated Optical Inspection (AOI) PPM Improvement
 
 % ---------------- SKILLS ----------------
 \section*{Skills}
-\textbf{Technical}
+
+\textbf{Technical Skills}
 \begin{itemize}
-    \item \textbf{Programming:} Python, SQL, JavaScript, HTML, CSS
-    \item \textbf{Data \& Cloud:} ETL pipelines, warehouses, spreadsheets, basic cloud object storage
-    \item \textbf{Web:} REST APIs, responsive pages, Git, code review
-    \item \textbf{IT Support:} Troubleshooting, account administration, documentation
+    \item \textbf{Software Proficiency:} Microsoft Office (Word, Excel, PowerPoint), Google Suite, and Adobe Creative Suite
+    \item \textbf{IT Support:} Troubleshooting, software installation, hardware maintenance
+    \item \textbf{Networking:} Network configuration, Wi-Fi setup, VPN, basic understanding of network protocols
+    \item \textbf{Programming Languages:} Python, JavaScript, SQL, R, and C++
 \end{itemize}
 
-\textbf{Working style}
+\textbf{Soft Skills}
 \begin{itemize}
-    \item Clear written documentation, stakeholder updates, and structured problem solving
-    \item Comfortable switching between independent delivery and small-team collaboration
+    \item \textbf{Customer Support:} Handling inquiries, troubleshooting issues
+    \item \textbf{Data Entry and Management:} Accurate data input, database management
+    \item \textbf{Scheduling and Coordination:} Calendar management, meeting coordination
 \end{itemize}
 
-% ---------------- LANGUAGES ----------------
-\section*{Languages}
-English (fluent) \, | \, Spanish (conversational) \, | \, Replace with your own languages and level.
+% ---------------- UNDERGRADUATE RESEARCH ----------------
+\section*{Undergraduate}
+
+\textbf{Research Title:} Occupancy-Aware Climate Control: Real-Time Sensor Feedback for Energy Management in Campus Facilities\par
+\textbf{Laboratory:} Smart Systems Laboratory Affiliate\par
+\textbf{Institution:} Department of Computer Science and Electrical Engineering
 
 % ---------------- REFERENCES ----------------
 \section*{References}
-\textbf{Jordan Lee} --- Manager, Northwind Analytics \hfill \href{mailto:jordan.lee@example.com}{jordan.lee@example.com}
 
-\textbf{Sam Patel} --- Senior Developer, Contoso Labs \hfill \href{mailto:sam.patel@example.com}{sam.patel@example.com}
+\textbf{Jordan Lee} - IT Officer, University Computer Center \hfill +1 (555) 010-2001 \, | \, \href{mailto:jordan.lee@example.edu}{jordan.lee@example.edu}
 
-Available in full upon request. Delete this section if the posting does not ask for references.
+\textbf{Sam Patel} - Junior ICT Manager, University Computer Center \hfill +1 (555) 010-2002 \, | \, \href{mailto:sam.patel@example.edu}{sam.patel@example.edu}
+
+\textbf{Riley Chen} - Executive Director, Sample Civic Foundation \hfill +1 (555) 010-2003 \, | \, \href{mailto:riley.chen@example.org}{riley.chen@example.org}
+
+\textbf{Morgan Ellis} - Co-Intern, Sample City Tourism, Culture, and Arts Office \hfill +1 (555) 010-2004
 
 \end{document}

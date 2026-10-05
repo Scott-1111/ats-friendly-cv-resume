@@ -1,9 +1,14 @@
 # Personal copies kept on this computer only
 _private_originals/
+_private_originals/**
 Camay_Omar_*
+**/Camay_Omar_*
 
-# LaTeX build output
+# LaTeX build output (including leftover personal aux/pdf)
 build/
+build/**
+
+# Generated TeX artifacts anywhere
 *.aux
 *.log
 *.out
