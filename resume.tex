@@ -1,0 +1,81 @@
+% =============================================================
+% One-page resume template (ATS-friendly)
+% Compile with: pdflatex -output-directory=build resume.tex
+% Or run: .\build.ps1   (Windows)    ./build.sh   (macOS/Linux)
+%
+% Keep this to one page: 3--4 recent roles, condensed skills,
+% and only the certifications that match the job.
+% =============================================================
+\documentclass[10pt,a4paper]{article}
+
+\input{style.tex}
+\usepackage[margin=0.6in]{geometry}
+
+\setlength{\parskip}{2pt}
+\titleformat{\section}{\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+
+\input{contact.tex}
+
+\begin{document}
+
+\contactheader
+
+% ---------------- SUMMARY ----------------
+Computer science graduate with hands-on experience in data pipelines, full-stack web features, and IT support. Built ETL workflows, shipped REST-backed pages, and wrote the documentation teammates use to run the work. Sample summary --- rewrite this for each application.
+
+% ---------------- EDUCATION ----------------
+\section*{Education}
+\entry{Sample State University}{2019 -- 2023}
+\role{Bachelor of Science in Computer Science}
+
+% ---------------- EXPERIENCE ----------------
+\section*{Experience}
+
+\entry{Northwind Analytics}{January 2024 -- Present}
+\role{Data Analyst}
+\begin{itemize}
+    \item Built and maintained \textbf{ETL} workflows that cleaned operational data and loaded it into a cloud warehouse for weekly reporting.
+    \item Wrote \textbf{SQL} and \textbf{Python} checks that caught quality issues before stakeholder reviews.
+    \item Documented architecture, schedules, and troubleshooting so new teammates could run jobs independently.
+\end{itemize}
+
+\entry{Contoso Labs}{June 2022 -- December 2023}
+\role{Junior Software Developer}
+\begin{itemize}
+    \item Developed frontend and backend features for an internal web app, including publishing and user settings.
+    \item Integrated \textbf{RESTful APIs} and improved page performance and layout consistency with the design team.
+    \item Contributed through code reviews, tests, and Git-based releases in two-week sprints.
+\end{itemize}
+
+\entry{Sample State University IT Help Desk}{September 2020 -- May 2022}
+\role{Student Technician}
+\begin{itemize}
+    \item Resolved account, network, and software issues for students and staff by phone, email, and walk-up support.
+    \item Assisted with imaging, Wi-Fi troubleshooting, and access requests under campus IT policy.
+\end{itemize}
+
+% ---------------- PROJECTS ----------------
+\section*{Projects}
+\entry{Campus Events Board}{github.com/alexrivera-sample/events-board}
+\begin{itemize}
+    \item Full-stack board for student groups to post events, with approvals and hosted file storage.
+\end{itemize}
+
+% ---------------- SKILLS ----------------
+\section*{Skills}
+\textbf{Programming:} Python, SQL, JavaScript, HTML, CSS, Git\par
+\textbf{Data \& Cloud:} ETL pipelines, SQL warehouses, data quality checks, spreadsheets\par
+\textbf{Web:} REST APIs, responsive layout, documentation, code review\par
+\textbf{Tools:} Microsoft Office, Google Workspace
+
+% ---------------- CERTIFICATIONS ----------------
+\section*{Certifications}
+\textbf{Sample Learning Platform:} Intermediate Python, Introduction to SQL, Version Control with Git\par
+\textbf{Sample Institute:} Lean Process Fundamentals
+
+% ---------------- LEADERSHIP ----------------
+\section*{Leadership}
+Events Coordinator, Sample Computing Society (2022--2023) \, | \, Workshop Volunteer (2021--2022)
+
+\end{document}

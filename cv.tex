@@ -1,0 +1,132 @@
+% =============================================================
+% Curriculum Vitae template (multi-page, ATS-friendly)
+% Compile with: pdflatex -output-directory=build cv.tex
+% Or run: .\build.ps1   (Windows)    ./build.sh   (macOS/Linux)
+%
+% A CV lists a fuller history: more roles, affiliations, research,
+% certifications, and references. Use resume.tex when you need one page.
+%
+% ATS notes: single column, standard fonts, real text next to icons,
+% no tables in the main content, dates on the same line as the role.
+% =============================================================
+\documentclass[10pt,a4paper]{article}
+
+\input{style.tex}
+\usepackage[margin=0.55in,bottom=0.45in]{geometry}
+
+\setlength{\parskip}{2pt}
+\linespread{0.95}
+
+\input{contact.tex}
+
+\begin{document}
+
+\contactheader
+
+% ---------------- SUMMARY ----------------
+Results-oriented professional with experience in data platforms, software delivery, and technical support. Built automated data pipelines, contributed full-stack web features, and documented systems so teams can operate and extend them. Sample summary --- replace this paragraph with 3--5 sentences tailored to the role you want.
+
+% ---------------- EDUCATION ----------------
+\section*{Education}
+\entry{Sample State University}{2019 -- 2023}
+\role{Bachelor of Science in Computer Science}
+Relevant coursework: Data Structures, Databases, Computer Networks, Software Engineering.
+
+% ---------------- EXPERIENCE ----------------
+\section*{Experience}
+
+\entry{Northwind Analytics}{January 2024 -- Present}
+\role{Data Analyst}
+\begin{itemize}
+    \item Designed and maintained \textbf{ETL} workflows that extracted, cleaned, and loaded operational data into a cloud warehouse for weekly reporting.
+    \item Wrote \textbf{SQL} and \textbf{Python} scripts to validate data quality, reducing recurring spreadsheet fixes before stakeholder reviews.
+    \item Documented pipeline architecture, refresh schedules, and troubleshooting steps so new teammates could run jobs independently.
+    \item Partnered with product and operations teams to turn business questions into dashboards and repeatable analyses.
+\end{itemize}
+
+\entry{Contoso Labs}{June 2022 -- December 2023}
+\role{Junior Software Developer}
+\begin{itemize}
+    \item Developed and maintained frontend and backend features for an internal web app, including content publishing and user settings.
+    \item Integrated \textbf{RESTful APIs} so the interface could create, update, and display records without manual page edits.
+    \item Collaborated with designers to improve layout consistency, responsiveness, and accessibility across key pages.
+    \item Participated in code reviews, testing, and Git-based releases in a two-week sprint cycle.
+\end{itemize}
+
+\entry{Sample State University IT Help Desk}{September 2020 -- May 2022}
+\role{Student Technician}
+\begin{itemize}
+    \item Provided in-person, phone, and email support for account, network, and software issues for students and staff.
+    \item Assisted with workstation imaging, Wi-Fi troubleshooting, and access requests under campus IT policy.
+    \item Logged tickets and resolutions so common problems had a reusable knowledge-base article.
+\end{itemize}
+
+\entry{Freelance}{2021 -- 2022}
+\role{Web and Design Contractor}
+\begin{itemize}
+    \item Delivered small-business landing pages and print-ready graphics from brief through revision and handoff.
+    \item Managed timelines, file versions, and client communication for concurrent short projects.
+\end{itemize}
+
+% ---------------- PROJECTS ----------------
+\section*{Projects}
+\entry{Campus Events Board}{github.com/alexrivera-sample/events-board}
+\begin{itemize}
+    \item Built a full-stack board where student groups can post events, with a simple admin view for approvals.
+    \item Used a hosted database and file storage so announcements and images persist across sessions.
+\end{itemize}
+
+\entry{Personal Finance Tracker}{github.com/alexrivera-sample/finance-tracker}
+\begin{itemize}
+    \item Created a client-side tracker for monthly categories, with local storage and CSV export.
+    \item Focused on a clear layout so a first-time user can log expenses without an account.
+\end{itemize}
+
+% ---------------- AFFILIATIONS ----------------
+\section*{Professional Affiliations}
+\entry{Sample Computing Society}{}
+\begin{itemize}
+    \item Events Coordinator \hfill 2022 -- 2023
+    \item Workshop Volunteer \hfill 2021 -- 2022
+\end{itemize}
+
+\entry{University Open Source Club}{}
+\begin{itemize}
+    \item Maintainer, beginner project night \hfill 2022
+\end{itemize}
+
+% ---------------- CERTIFICATIONS ----------------
+\section*{Certifications}
+\textbf{Sample Learning Platform:} Introduction to SQL, Intermediate Python, Data Literacy, Version Control with Git.
+
+\textbf{Sample Institute:} Lean Process Fundamentals \, | \, \textbf{Sample Cloud Academy:} Cloud Storage Basics
+
+% ---------------- SKILLS ----------------
+\section*{Skills}
+\textbf{Technical}
+\begin{itemize}
+    \item \textbf{Programming:} Python, SQL, JavaScript, HTML, CSS
+    \item \textbf{Data \& Cloud:} ETL pipelines, warehouses, spreadsheets, basic cloud object storage
+    \item \textbf{Web:} REST APIs, responsive pages, Git, code review
+    \item \textbf{IT Support:} Troubleshooting, account administration, documentation
+\end{itemize}
+
+\textbf{Working style}
+\begin{itemize}
+    \item Clear written documentation, stakeholder updates, and structured problem solving
+    \item Comfortable switching between independent delivery and small-team collaboration
+\end{itemize}
+
+% ---------------- LANGUAGES ----------------
+\section*{Languages}
+English (fluent) \, | \, Spanish (conversational) \, | \, Replace with your own languages and level.
+
+% ---------------- REFERENCES ----------------
+\section*{References}
+\textbf{Jordan Lee} --- Manager, Northwind Analytics \hfill \href{mailto:jordan.lee@example.com}{jordan.lee@example.com}
+
+\textbf{Sam Patel} --- Senior Developer, Contoso Labs \hfill \href{mailto:sam.patel@example.com}{sam.patel@example.com}
+
+Available in full upon request. Delete this section if the posting does not ask for references.
+
+\end{document}

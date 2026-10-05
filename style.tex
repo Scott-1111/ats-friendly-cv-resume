@@ -1,0 +1,52 @@
+% =============================================================
+% Shared ATS-friendly style
+% Loaded by both the CV and one-page resume templates.
+% =============================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{graphicx}
+
+\pagestyle{empty}
+\graphicspath{{pictures/}}
+
+% Section heading: bold title with a thin rule (still real text for ATS)
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% Organization (bold) with dates flush right on the same line
+\newcommand{\entry}[2]{\textbf{#1} \hfill #2\par}
+\newcommand{\role}[1]{\textit{#1}\par}
+
+% Compact bullet lists used under each role
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=1pt, parsep=0pt}
+
+% Icon next to visible, parseable contact text.
+% Replace the PNG files in pictures/ with your own artwork.
+\newcommand{\contacticon}[1]{%
+  \raisebox{-0.18em}{\includegraphics[height=0.95em]{#1}}%
+}
+
+% #1 = icon filename in pictures/  #2 = URL  #3 = visible text
+\newcommand{\iconlink}[3]{%
+  \href{#2}{\contacticon{#1}\hspace{0.22em}#3}%
+}
+
+\newcommand{\contactheader}{%
+  \begin{center}
+    {\LARGE \textbf{\name}}\\[4pt]
+    \iconlink{website.png}{\websiteurl}{\websitetext}
+    \, | \,
+    \iconlink{call.png}{tel:\phone}{\phone}
+    \, | \,
+    \iconlink{linkedin.png}{\linkedinurl}{\linkedintext}
+    \, | \,
+    \href{mailto:\email}{\email}
+    \, | \,
+    \location
+  \end{center}
+}

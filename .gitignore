@@ -1,0 +1,29 @@
+# Personal copies kept on this computer only
+_private_originals/
+Camay_Omar_*
+
+# LaTeX build output
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.xdv
+*.lof
+*.lot
+
+# Generated PDFs (build them locally; do not commit personal PDFs)
+*.pdf
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
